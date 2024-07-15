@@ -9,7 +9,7 @@ and add my docker compose file to the above cloned folder and run below steps:
 
       docker-compose up -d
       
-it will create app images also and the our website will work with  like you ip http://<your ip>:3000/
+it will create app images also and the our website will work with  like you ip http://192.168.29.29:3000/
 
 https://github.com/kotojuvenu/Swimlane-DevOps-Practical/blob/main/Swimlane-app-code/swimlane-app-docker-compose.png
 
@@ -48,7 +48,27 @@ devops-practical_app                latest    a1604e6c8a3a
             
             kubectl get all
 
+##### Resorces deployed screenshot attached below.
+
+  https://github.com/kotojuvenu/Swimlane-DevOps-Practical/blob/main/Swimlane-app-code/kubernets-resoureces-after-deployed.png
+
+##### After fresh deployed app url page.
+
+  https://github.com/kotojuvenu/Swimlane-DevOps-Practical/blob/main/Swimlane-app-code/kubernets-deployed-app-fresh-page.png
+
+##### App Signup page.
+
+  https://github.com/kotojuvenu/Swimlane-DevOps-Practical/blob/main/Swimlane-app-code/kubernets-deployed-app-signup-page.png
+  
+##### Chat created page.
+
+  https://github.com/kotojuvenu/Swimlane-DevOps-Practical/blob/main/Swimlane-app-code/kubernets-deployed-app-article-creating.png
+
+##### Final app tested page.
+
+   https://github.com/kotojuvenu/Swimlane-DevOps-Practical/blob/main/Swimlane-app-code/kubernets-deployed-app-comments-created-pages.png
 
 
+  
 
 
