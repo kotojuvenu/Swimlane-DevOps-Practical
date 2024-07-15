@@ -11,3 +11,4 @@ and add my docker compose file to the above cloned folder and run below steps:
       
 it will create app images also and the our website will work with  like you ip http://<your ip>:3000/
 
+https://github.com/kotojuvenu/Swimlane-DevOps-Practical/blob/main/Swimlane-app-code/swimlane-app-docker-compose.png
