@@ -5,3 +5,5 @@ git clone https://github.com/kotojuvenu/Swimlane-DevOps-Practical.git
 
 1. #### Please go to packer folder and follow the README.md for AWS golden ami creation using Ansible and Packer as asking in the devops practical
       ##### after clone the above repo cd Swimlane-DevOps-Practical/packer then follow README.md
+2. #### Please go to Eks-Terraform folder and Follow the README.md for EKS creation using Terrraform with autoscaling node min 2 and max 4
+3. #### Please go to Swimlane-app-code folder and follow the README.md for App deployment using docker-compose or Kubernetes manifest files.
