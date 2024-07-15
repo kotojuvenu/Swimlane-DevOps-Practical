@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-practical
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devops-practical
+  template:
+    metadata:
+      labels:
+        app: devops-practical
+    spec:
+      containers:
+      - name: devops-practical
+        image: kotojuvenu06/docker-practical_app:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: MONGODB_URL
+          value: "mongodb://mongodb:27017/devops-practical"
