@@ -13,9 +13,9 @@ it will create app images also and the our website will work with  like you ip h
 
 https://github.com/kotojuvenu/Swimlane-DevOps-Practical/blob/main/Swimlane-app-code/swimlane-app-docker-compose.png
 
-Push this image to our repository.
+Push this below created image to our repository.
 
-devops-practical_app                latest    a1604e6c8a3a   
+     devops-practical_app                latest    a1604e6c8a3a   
 
 #### Tag this image to our docker hub repo for push the image to our own docker hub 
 
