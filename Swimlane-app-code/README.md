@@ -1,4 +1,4 @@
-# swimlane-practical
+# Swimlane-Practical
 
 
 #### Please clone this you are provided below repo 
