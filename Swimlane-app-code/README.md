@@ -34,7 +34,7 @@ Push this below created image to our repository with proper credentials of docke
       Removing devops-practical_mongodb_1 ... done
       Removing network devops-practical_default
 
-#### Run below commands to up service using added manifest files:
+#### Run below commands to up service using added manifest files on created EKS cluster or minikube :
 
             kubectl apply -f config-map.yml
   
