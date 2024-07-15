@@ -4,4 +4,4 @@
 git clone https://github.com/kotojuvenu/Swimlane-DevOps-Practical.git
 
 1. #### Please go to packer folder and follow the README.md for AWS golden ami creation using Ansible and Packer as asking in the devops practical
-##### after clone the above repo cd Swimlane-DevOps-Practical/packer then follow README.md
+      ##### after clone the above repo cd Swimlane-DevOps-Practical/packer then follow README.md
