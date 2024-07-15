@@ -10,5 +10,5 @@
       After clone the above repo cd Swimlane-DevOps-Practical/Eks-Terraform then follow README.md
 
 3. #### Please go to Swimlane-app-code folder and follow the README.md for App deployment using docker-compose or Kubernetes manifest files.
-      After clone the above repo cd Swimlane-DevOps-Practical/Wwimlane-app-code then follow README.md
+      After clone the above repo cd Swimlane-DevOps-Practical/swimlane-app-code then follow README.md
 
