@@ -1,0 +1,92 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Ensure Python 3 is installed
+      raw: |
+        if ! command -v python3 &>/dev/null; then
+          yum install -y python3
+        fi
+
+    - name: Ensure python points to python3
+      file:
+        src: /usr/bin/python3
+        dest: /usr/bin/python
+        state: link
+        force: yes
+
+- hosts: all
+  become: yes
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  tasks:
+    - name: Update all packages
+      dnf:
+        name: "*"
+        state: latest
+
+    - name: Install Nginx
+      dnf:
+        name: nginx
+        state: present
+
+    - name: Install Chrony for time synchronization
+      dnf:
+        name: chrony
+        state: present
+
+    - name: Start and enable Chrony service
+      service:
+        name: chronyd
+        state: started
+        enabled: yes
+
+    - name: Ensure Chrony is running
+      service:
+        name: chronyd
+        state: restarted
+
+    - name: Verify Chrony status
+      command: systemctl status chronyd
+      register: chrony_status
+
+    - name: Debug Chrony status
+      debug:
+        var: chrony_status
+
+    - name: Create Nginx configuration directory
+      file:
+        path: /etc/nginx/conf.d
+        state: directory
+
+    - name: Deploy custom Nginx configuration
+      copy:
+        content: |
+          server {
+              listen 80;
+              server_name _;
+              location / {
+                  root /usr/share/nginx/html;
+                  index index.html index.htm;
+              }
+          }
+        dest: /etc/nginx/conf.d/custom.conf
+
+    - name: Create a custom index.html file
+      copy:
+        content: |
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <title>Welcome to Nginx</title>
+          </head>
+          <body>
+              <h1>Success! The Nginx server is working!</h1>
+          </body>
+          </html>
+        dest: /usr/share/nginx/html/index.html
+
+    - name: Restart Nginx to apply configuration changes
+      service:
+        name: nginx
+        state: restarted
+
